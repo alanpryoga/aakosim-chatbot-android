@@ -1,0 +1,116 @@
+// .chat-wrapper {
+//   padding-left: 8px;
+//   padding-right: 8px;
+// }
+
+// .bubble-chat {
+//   background-color: #c5e1a5;
+
+//   display: inline-block;
+
+//   position: relative;
+//   padding: 16px;
+
+//   border-radius: 0 8px 8px 8px;
+//   border: none;
+
+//   margin-left: 14px;
+//   margin-top: 8px;
+//   margin-bottom: 8px;
+
+//   p {
+//     margin: 0;
+//   }
+
+//   .date-description {
+//     font-size: 12px;
+//     text-align: right;
+//     color: #868686;
+
+//     margin-top: 8px;
+//   }
+// }
+// .bubble-chat::after {
+//   content: '';
+// 	position: absolute;
+// 	left: 0;
+// 	top: 0;
+// 	width: 0;
+// 	height: 0;
+// 	border-left: 10px solid transparent;
+//   border-right: 10px solid #c5e1a5;
+//   border-top: 10px solid #c5e1a5;
+//   border-bottom: 10px solid transparent;
+// 	margin-top: 0;
+// 	margin-left: -16px;
+// }
+
+// .bubble-chat.self {
+//   background-color: #dddddd;
+
+//   margin-left: 0;
+//   margin-right: 14px;
+
+//   float: right;
+
+//   border-radius: 8px 0 8px 8px;
+// }
+// .bubble-chat.self::after {
+//   left: calc(100% + 12px);
+// 	top: 0;
+// 	width: 0;
+// 	height: 0;
+
+// 	border-right: 10px solid transparent;
+//   border-left: 10px solid #dddddd;
+//   border-top: 10px solid #dddddd;
+//   border-bottom: 10px solid transparent;
+// }
+// .send-button {
+//   padding-right: 16px;
+//   padding-left: 16px;
+
+//   position: relative;
+//   overflow: hidden;
+// }
+.chat-wrapper {
+  padding: 8px 16px;
+
+  .bubble-chat {
+    text-align: left;
+
+    p {
+      display: inline-block;
+
+      border-radius: 4px;
+
+      margin: 8px 0;
+      padding: 8px 16px;
+
+      background-color: #c5e1a5;
+
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 1.5em;
+
+      .text-description {
+        font-size: 9px;
+        font-weight: 300;
+        color: #646464;
+      }
+    }
+
+  }
+
+  .bubble-chat.self {
+    text-align: right;
+
+    p {
+      background-color: #dddddd;
+    }
+  }
+}
+
+.bg-white {
+  background: white;
+}

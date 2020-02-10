@@ -1,0 +1,43 @@
+<ion-content>
+  <form #form="ngForm" (ngSubmit)="login(form)" method="post">
+    <ion-grid>
+      <ion-row>
+        <ion-col>
+          <ion-img class="img-logo" src="assets/image/logo.png"></ion-img>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Alamat Email</ion-label>
+            <ion-input ngModel type="email" name="email"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-item>
+            <ion-label position="floating">Kata Sandi</ion-label>
+            <ion-input ngModel type="password" name="password"></ion-input>
+          </ion-item>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" color="secondary" expand="block">Masuk</ion-button>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col>
+          <p class="text-description">
+            Belum memiliki akun? <a href="#" routerLink="/register">Registrasi</a>
+          </p>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </form>
+</ion-content>

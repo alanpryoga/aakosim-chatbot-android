@@ -1,0 +1,35 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>
+      Pesan
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="chat" #content>
+  <div class="chat-wrapper">
+    <div *ngFor="let chat of chats" class="bubble-chat" [ngClass]="chat.is_bot ? '' : 'self'">
+      <p>
+        {{chat.message}} <br>
+        <span class="text-description">{{ chat.date_created | timeAgo }}</span>
+      </p>
+    </div>
+  </div>
+</ion-content>
+
+<ion-footer class="bg-white">
+  <ion-toolbar>
+    <ion-item>
+      <ion-label position="floating">Ketik pesan dinisi</ion-label>
+      <ion-textarea [(ngModel)]="message" autoGrow="true"></ion-textarea>
+    </ion-item>
+    <ion-buttons class="send-button" slot="end">
+      <ion-button (click)="sendMessage()">
+        <ion-icon name="send"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-footer>

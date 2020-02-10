@@ -12,29 +12,41 @@ import { StatusBar } from '@ionic-native/status-bar/ngx';
 export class AppComponent {
   public appPages = [
     {
-      title: 'Home',
+      title: 'Pesan',
       url: '/home',
-      icon: 'home'
+      icon: 'chatboxes'
     },
     {
-      title: 'List',
-      url: '/list',
-      icon: 'list'
-    }
+      title: 'Tentang',
+      url: '/about',
+      icon: 'information-circle'
+    },
+    {
+      title: 'Kontak Kami',
+      url: '/contact',
+      icon: 'call'
+    },
+    {
+      title: 'Keluar',
+      url: '/login',
+      icon: 'log-out'
+    },
   ];
 
   constructor(
     private platform: Platform,
     private splashScreen: SplashScreen,
-    private statusBar: StatusBar
+    private statusBar: StatusBar,
   ) {
     this.initializeApp();
   }
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.statusBar.styleDefault();
       this.splashScreen.hide();
+
+      this.statusBar.backgroundColorByHexString('#412486');
+      this.statusBar.styleBlackTranslucent();
     });
   }
 }
